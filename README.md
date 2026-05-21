@@ -783,6 +783,8 @@ yc vpc security-group list
 
 Финальный код находится в ветке `terraform-03`.
 
+https://github.com/victoryurochkin/hw-03-03/commit/424bc2d24df31b70beae530ddbfdb501d964d160
+
 Ссылка на коммит:
 
 ```text
