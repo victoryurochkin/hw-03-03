@@ -141,3 +141,53 @@ variable "vm_zone" {
   description = "Availability zone for virtual machines"
   default     = "ru-central1-b"
 }
+
+variable "storage_vm_name" {
+  type        = string
+  description = "Storage VM name"
+  default     = "storage"
+}
+
+variable "storage_vm_platform_id" {
+  type        = string
+  description = "Platform ID for storage VM"
+  default     = "standard-v1"
+}
+
+variable "storage_vm_resources" {
+  type = object({
+    cores         = number
+    memory        = number
+    core_fraction = number
+    disk_volume   = number
+    disk_type     = string
+  })
+
+  description = "Resources for storage VM"
+
+  default = {
+    cores         = 2
+    memory        = 2
+    core_fraction = 5
+    disk_volume   = 10
+    disk_type     = "network-hdd"
+  }
+}
+
+variable "storage_disk_count" {
+  type        = number
+  description = "Number of additional disks for storage VM"
+  default     = 3
+}
+
+variable "storage_disk_size" {
+  type        = number
+  description = "Additional storage disk size in GB"
+  default     = 1
+}
+
+variable "storage_disk_type" {
+  type        = string
+  description = "Additional storage disk type"
+  default     = "network-hdd"
+}
